@@ -27,4 +27,17 @@ public class Stack_Queue {
         size++;
         System.out.println("Data:"+data);
     }
+    //REMOVING OF ELEMENTS
+    public int dequeue() {
+        int data = front.data;
+        front = front.next;
+        if (isEmpty())
+        {
+            rear = null;
+        }
+        size--;
+        System.out.println("Removed Data"+data);
+        return data;
+    }
+
 }
