@@ -7,6 +7,12 @@ public class Node {
         num.push(30);
         num.push(56);
         num.show();
+        System.out.println(num.peek());
+        System.out.println(num.pop());
+        System.out.println(num.peek());
+        System.out.println(num.pop());
+        System.out.println(num.peek());
+        System.out.println(num.pop());
 
     }
 }

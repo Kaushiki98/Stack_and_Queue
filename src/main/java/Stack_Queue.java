@@ -1,6 +1,5 @@
 public class Stack_Queue {
     Node top = null;
-    public Object Create_Stack_UC1;
 
     public void push(int data){
         Node node = new Node();
@@ -15,6 +14,15 @@ public class Stack_Queue {
             node.next = top;
             top = node;
         }
+    }
+    public int peek(){
+        int topValue = top.data;
+        return topValue;
+    }
+    public int pop(){
+        int topValue = top.data;
+        top = top.next;
+        return topValue;
     }
     public void show(){
         Node n = top;
