@@ -2,17 +2,9 @@ public class Node {
     int data ;
     Node next;
     public static void main(String[] args) {
-        Stack_Queue num = new Stack_Queue();
-        num.push(70);
-        num.push(30);
-        num.push(56);
-        num.show();
-        System.out.println(num.peek());
-        System.out.println(num.pop());
-        System.out.println(num.peek());
-        System.out.println(num.pop());
-        System.out.println(num.peek());
-        System.out.println(num.pop());
-
+        Stack_Queue list = new Stack_Queue();
+        list.enqueue(56);
+        list.enqueue(30);
+        list.enqueue(70);
     }
 }

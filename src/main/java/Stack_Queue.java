@@ -1,35 +1,30 @@
 public class Stack_Queue {
-    Node top = null;
+    Node front, rear;
+    //NUMBER OF LINES
+    int size;
 
-    public void push(int data){
-        Node node = new Node();
-        node.data = data;
-        node.next = null;
+    public Stack_Queue()
+    {
+        front = null;
+        rear = null;
+        size = 0;
+    }
 
-        if(top == null){
-            //node.next = null;
-            top = node;
-        }
-        else{
-            node.next = top;
-            top = node;
-        }
+    public boolean isEmpty() {
+        return (size == 0);
     }
-    public int peek(){
-        int topValue = top.data;
-        return topValue;
-    }
-    public int pop(){
-        int topValue = top.data;
-        top = top.next;
-        return topValue;
-    }
-    public void show(){
-        Node n = top;
-        while(n.next != null){
-            System.out.println("Data: "+n.data);
-            n = n.next;
+    //ADDING OF ELEMENTS
+    public void enqueue(int data) {
+        Node oldRear = rear;
+        rear = new Node();
+        rear.data = data;
+        rear.next = null;
+        if (isEmpty()) {
+            front = rear;
+        } else {
+            oldRear.next = rear;
         }
-        System.out.println("Data: "+n.data);
+        size++;
+        System.out.println("Data:"+data);
     }
 }
